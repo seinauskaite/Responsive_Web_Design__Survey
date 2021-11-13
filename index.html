@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Build a Survey Form</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&display=swap");
+      body {
+        font-family: "Source Code Pro", monospace;
+        background-image: url(https://images.pexels.com/photos/19670/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+        width: 100%;
+        display: flex;
+      }
+      h1 {
+        font-size: 30px;
+        text-align: center;
+      }
+      #main {
+        display: flex;
+        width: 100%;
+        padding: 1rem;
+      }
+      div,
+      input {
+        padding: 0.1rem;
+      }
+      #part-one {
+        padding: 2rem;
+        background-color: rgb(105, 184, 221);
+        width: 50%;
+      }
+      #part-two {
+        padding: 2rem;
+        background-image: url(https://cdn.cnn.com/cnnnext/dam/assets/200311093607-jeff-divine-surf-70s-1-full-169.jpg);
+        width: 50%;
+      }
+
+      input,
+      select,
+      textarea {
+        height: 1.5rem;
+        background-color: rgba(245, 245, 245, 0.597);
+        border: thin;
+        padding: 0.2rem 0.5rem;
+        border-radius: 0.4rem;
+      }
+      button {
+        background-color: #525252;
+        border: none;
+        color: rgb(238, 247, 236);
+        padding: 5px 10px;
+        text-align: center;
+        font-size: 14px;
+        border-radius: 0.4rem;
+        padding: 5px;
+      }
+      #dropdown {
+        padding: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <main id="main">
+      <section id="part-one">
+        <div id="part-one-container">
+          <h1 id="title">How active is your lifestyle?</h1>
+          <p id="description" class="question">
+            Thank you for taking time for this random survey
+          </p>
+          <form id="survey-form">
+            <div>
+              <label for="name" id="name-label">Name</label>
+              <input
+                type="text"
+                id="name"
+                required
+                placeholder="Your name"
+                required
+              />
+            </div>
+            <div>
+              <label for="email" id="email-label">Email</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="Email address"
+                required
+              />
+            </div>
+            <div>
+              <label for="number" id="number-label" class="question"
+                >How many hours weekly do you spend doing sports?</label
+              >
+              <input
+                type="number"
+                id="number"
+                min="1"
+                max="10"
+                placeholder="h"
+                required
+              />
+            </div>
+            <div>
+              <label for="dropdown" id="dropdown-label" class="question"
+                >Are you satisfied with your activity?</label
+              >
+              <select id="dropdown">
+                <option value="hapy">Happy</option>
+                <option value="not proud">Not so proud</option>
+              </select>
+            </div>
+            <div>
+              <legend class="question">
+                What do you prefer during the weekend?
+              </legend>
+              <label for="radio" id="radio-label"
+                >Active<input
+                  type="radio"
+                  id="active"
+                  name="weekend"
+                  value="active"
+              /></label>
+              <label for="radio" id="radio-label"
+                >Lazy<input type="radio" id="lazy" name="weekend" value="lazy"
+              /></label>
+            </div>
+            <div>
+              <legend class="question">Pick the best activities:</legend>
+              <label for="checkbox"
+                >Tennis<input type="checkbox" name="activities"
+                value="Tennis"</label
+              >
+              <label for="checkbox"
+                >Swimming<input type="checkbox" name="activities"
+                value="Swimming"</label
+              >
+              <label for="checkbox"
+                >Surfing<input type="checkbox" name="activities"
+                value="Surfing"</label
+              >
+            </div>
+            <div>
+              <legend class="question">What other sports you like?</legend>
+              <label for="textarea">Don't be shy</label>
+              <textarea
+                input="textarea"
+                id="textarea"
+                name="other sports"
+              ></textarea>
+            </div>
+            <button id="submit" type="submit">Submit</button>
+          </form>
+        </div>
+      </section>
+      <section id="part-two">
+        <div id="part-two-container">
+          <h1>Let's do it!</h1>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</html>
